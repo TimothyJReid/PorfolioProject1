@@ -97,18 +97,49 @@ body {
   }
 }
 
-.aspectwrapper {
-  display: inline-block; /* shrink to fit */
-  width: 100%;           /* whatever width you like */
-  position: relative;    /* so .content can use position: absolute */
+/* Flexbox area */
+
+.flexbox-container {
+  display: flex;
+  margin: 0%;
 }
-.aspectwrapper::after {
-  padding-top: 56.25%; /* percentage of containing block _width_ */
-  display: block;
-  content: '';
-}
-.content {
+
+.flex-box-video {
   position: absolute;
-  top: 0; bottom: 0; right: 0; left: 0;  /* follow the parent's edges */
-  outline: solid green;            /* just so you can see the box */
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  opacity: 0.8;
+  width: 100%;
+  max-height: 100vh;
+  
+}
+
+.flexbox-container-1 {
+  display: flex;
+  flex-direction: row;
+  background-color: lime;
+  justify-content: space-around;
+   
+}
+
+.flexbox-item {
+  width: 400px;
+  
+  margin: 10px;
+  border: 10px solid black;
+  background-color: lightslategray;
+}
+
+.flexbox-item-1 {
+min-height: 100px;
+}
+
+.flexbox-item-2 {
+  min-height: 200px;
+}
+
+.flexbox-item-3 {
+  min-height: 300px;
+  
 }
